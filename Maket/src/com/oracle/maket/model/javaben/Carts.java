@@ -10,6 +10,13 @@ import java.io.Serializable;
  */
 public class Carts implements Serializable {
 
+	@Override
+	public String toString() {
+		return "Carts [cartid=" + cartid + ", goodsid=" + goodsid
+				+ ", cartgoodsnumber=" + cartgoodsnumber + ", userid=" + userid
+				+ "]";
+	}
+
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 

@@ -863,7 +863,7 @@
 								<em></em>收藏
 							</div> <!-- <div class="hoverShow wish"><em></em>加入心愿单</div> -->
 							<div class="show">
-								<a class="add" href="#">加入购物车</a> <a class="contrast" href="#">商品对比</a>
+								<a class="add" href="car/add?pid=<%=g.getGoodsid() %>">加入购物车</a> <a class="contrast" href="#">商品对比</a>
 							</div>
 							<div class="proImg">
 								<a href="#"> <img class="lazy" src="<%=g.getGoodspicture()%>" data-original="<%=g.getGoodspicture()%>" alt="">
