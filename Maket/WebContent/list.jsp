@@ -1,3 +1,4 @@
+<%@page import="com.oracle.maket.model.javaben.Users"%>
 <%@page import="com.oracle.maket.model.javaben.Goods"%>
 <%@page import="java.util.ArrayList"%>
 
@@ -37,8 +38,17 @@
 					</a>
 				</div>
 				<div class="user">
-					<a target="_blank" href="#">登录</a> <span>|</span> <a
+					<% if(session.getAttribute("logineduser")==null){ %>
+						<a  href="login.jsp">登录</a> <span>|</span> <a
 						target="_blank" href="#">免费注册</a>
+						<%}else{ %>
+							欢迎您：<B style="text-shadow: 0px 0px 1px green"><%=((Users)session.getAttribute("logineduser")).getNickname() %></B>!
+							
+							<%---这里应该是让安全退出的超级链接请求到后台的control方法，
+							方法里需要移除之前在session中保存的用户信息，然后后台直接跳转道网站首页？？？ --%>
+							<a href="">安全退出</a>
+							<%
+						} %>
 				</div>
 				<div class="phone">
 					<a href="#"> <em></em> <span>手机逛澳猫</span>

@@ -11,6 +11,14 @@ import java.sql.Blob;
  */
 public class Users implements Serializable {
 
+	@Override
+	public String toString() {
+		return "Users [userid=" + userid + ", username=" + username
+				+ ", nickname=" + nickname + ", password=" + password
+				+ ", age=" + age + ", sex=" + sex + ", headimage=" + headimage
+				+ ", telephone=" + telephone + "]";
+	}
+
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
