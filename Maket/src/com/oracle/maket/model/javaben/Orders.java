@@ -10,6 +10,13 @@ import java.io.Serializable;
  */
 public class Orders implements Serializable {
 
+	@Override
+	public String toString() {
+		return "Orders [ordersid=" + ordersid + ", orderstime=" + orderstime
+				+ ", userid=" + userid + ", state=" + state + ", location="
+				+ location + ", notice=" + notice + "]";
+	}
+
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
