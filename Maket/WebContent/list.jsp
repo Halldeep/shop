@@ -46,9 +46,11 @@
 							
 							<%---这里应该是让安全退出的超级链接请求到后台的control方法，
 							方法里需要移除之前在session中保存的用户信息，然后后台直接跳转道网站首页？？？ --%>
-							<a href="">安全退出</a>
+							<a  target="_self" href="user/logout">安全退出</a>
 							<%
-						} %>
+						}
+							  
+						 %>
 				</div>
 				<div class="phone">
 					<a href="#"> <em></em> <span>手机逛澳猫</span>
@@ -875,7 +877,7 @@
 								</p>
 								<p class="num"><%=g.getGoodsnumber()%></p>
 								<p>
-									<strong>￥<%=g.getPrice()%></strong> <s>￥<%=g.getPrice()%></s>
+									<strong>￥<%=g.getPrice()%></strong> <s>￥<%=g.getPrice()%></s>S
 								</p>
 							</div>
 						</li>
