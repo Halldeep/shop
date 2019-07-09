@@ -40,7 +40,7 @@
 				<div class="user">
 					<% if(session.getAttribute("logineduser")==null){ %>
 						<a  href="login.jsp">登录</a> <span>|</span> <a
-						target="_blank" href="#">免费注册</a>
+						target="_blank" href="register.jsp">免费注册</a>
 						<%}else{ %>
 							欢迎您：<B style="text-shadow: 0px 0px 1px green"><%=((Users)session.getAttribute("logineduser")).getNickname() %></B>!
 							
