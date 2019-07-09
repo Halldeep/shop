@@ -22,6 +22,8 @@ public interface UserDAO {
 
 	public int addUser(String username, String nickname,String password);
 	
+	@Select("select count(*) from users where username=#{username} ")
+	public int selectuser(@Param("username")String username);
 	@Insert("insert into users(username,nickname,password) values(#{username},#{nickname},#{password})")
 	public int adduser(@Param("username")String username,@Param("nickname")String nickname,@Param("password")String password);
 }
