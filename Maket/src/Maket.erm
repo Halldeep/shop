@@ -11,8 +11,8 @@
 	</page_setting>
 	<category_index>0</category_index>
 	<zoom>0.8</zoom>
-	<x>63</x>
-	<y>242</y>
+	<x>81</x>
+	<y>315</y>
 	<default_color>
 		<r>128</r>
 		<g>128</g>
@@ -100,7 +100,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2019-07-07 10:48:45</creation_date>
-			<updated_date>2019-07-09 10:06:56</updated_date>
+			<updated_date>2019-07-09 11:02:30</updated_date>
 			<model_property>
 				<name>Project Name</name>
 				<value></value>
@@ -339,12 +339,25 @@
 			<unsigned>false</unsigned>
 			<args></args>
 			<description></description>
+			<logical_name>收货人</logical_name>
+			<physical_name>name</physical_name>
+			<type>nvarchar(n)</type>
+		</word>
+		<word>
+			<id>16</id>
+			<length>20</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<args></args>
+			<description></description>
 			<logical_name>昵称</logical_name>
 			<physical_name>nickname</physical_name>
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>16</id>
+			<id>17</id>
 			<length>100</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -357,8 +370,8 @@
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>17</id>
-			<length>20</length>
+			<id>18</id>
+			<length>200</length>
 			<decimal>null</decimal>
 			<array>false</array>
 			<array_dimension>null</array_dimension>
@@ -370,7 +383,7 @@
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>18</id>
+			<id>19</id>
 			<length>20</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -383,7 +396,7 @@
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>19</id>
+			<id>20</id>
 			<length>20</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -396,7 +409,7 @@
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>20</id>
+			<id>21</id>
 			<length>10</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -409,7 +422,7 @@
 			<type>float(p)</type>
 		</word>
 		<word>
-			<id>21</id>
+			<id>22</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -422,7 +435,7 @@
 			<type>boolean</type>
 		</word>
 		<word>
-			<id>22</id>
+			<id>23</id>
 			<length>20</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -435,7 +448,7 @@
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>23</id>
+			<id>24</id>
 			<length>20</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -448,7 +461,7 @@
 			<type>nvarchar(n)</type>
 		</word>
 		<word>
-			<id>24</id>
+			<id>25</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -461,7 +474,7 @@
 			<type>integer</type>
 		</word>
 		<word>
-			<id>25</id>
+			<id>26</id>
 			<length>20</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -493,7 +506,7 @@
 			<connections>
 				<relation>
 					<id>0</id>
-					<source>5</source>
+					<source>3</source>
 					<target>0</target>
 					<child_cardinality>1..n</child_cardinality>
 					<parent_cardinality>1</parent_cardinality>
@@ -510,7 +523,7 @@
 				</relation>
 				<relation>
 					<id>1</id>
-					<source>3</source>
+					<source>5</source>
 					<target>0</target>
 					<child_cardinality>1..n</child_cardinality>
 					<parent_cardinality>1</parent_cardinality>
@@ -562,7 +575,7 @@
 				<normal_column>
 					<id>1</id>
 					<referenced_column>12</referenced_column>
-					<relation>1</relation>
+					<relation>0</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -616,8 +629,8 @@
 				</normal_column>
 				<normal_column>
 					<id>3</id>
-					<referenced_column>24</referenced_column>
-					<relation>0</relation>
+					<referenced_column>25</referenced_column>
+					<relation>1</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -669,7 +682,7 @@
 			<connections>
 				<relation>
 					<id>2</id>
-					<source>4</source>
+					<source>3</source>
 					<target>1</target>
 					<child_cardinality>1..n</child_cardinality>
 					<parent_cardinality>1</parent_cardinality>
@@ -686,7 +699,7 @@
 				</relation>
 				<relation>
 					<id>3</id>
-					<source>3</source>
+					<source>4</source>
 					<target>1</target>
 					<child_cardinality>1..n</child_cardinality>
 					<parent_cardinality>1</parent_cardinality>
@@ -738,7 +751,7 @@
 				<normal_column>
 					<id>5</id>
 					<referenced_column>12</referenced_column>
-					<relation>3</relation>
+					<relation>2</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -764,7 +777,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>9</word_id>
+					<word_id>8</word_id>
 					<id>6</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -793,7 +806,7 @@
 				<normal_column>
 					<id>7</id>
 					<referenced_column>18</referenced_column>
-					<relation>2</relation>
+					<relation>3</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1090,7 +1103,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>20</word_id>
+					<word_id>21</word_id>
 					<id>15</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1117,7 +1130,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>8</word_id>
+					<word_id>9</word_id>
 					<id>16</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1220,7 +1233,7 @@
 			<primary_key_name></primary_key_name>
 			<columns>
 				<normal_column>
-					<word_id>17</word_id>
+					<word_id>18</word_id>
 					<id>18</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1247,7 +1260,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>18</word_id>
+					<word_id>19</word_id>
 					<id>19</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1275,7 +1288,7 @@
 				</normal_column>
 				<normal_column>
 					<id>20</id>
-					<referenced_column>24</referenced_column>
+					<referenced_column>25</referenced_column>
 					<relation>5</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1302,7 +1315,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>22</word_id>
+					<word_id>23</word_id>
 					<id>21</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1356,7 +1369,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>16</word_id>
+					<word_id>17</word_id>
 					<id>23</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1368,6 +1381,33 @@
 					<auto_increment>false</auto_increment>
 					<foreign_key>false</foreign_key>
 					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<cycle>false</cycle>
+						<description></description>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>15</word_id>
+					<id>24</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>nvarchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
 					<primary_key>false</primary_key>
 					<unique_key>false</unique_key>
 					<sequence>
@@ -1415,8 +1455,8 @@
 			<primary_key_name></primary_key_name>
 			<columns>
 				<normal_column>
-					<word_id>24</word_id>
-					<id>24</id>
+					<word_id>25</word_id>
+					<id>25</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1442,34 +1482,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>25</word_id>
-					<id>25</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>nvarchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<cycle>false</cycle>
-						<description></description>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>19</word_id>
+					<word_id>26</word_id>
 					<id>26</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1496,7 +1509,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>15</word_id>
+					<word_id>20</word_id>
 					<id>27</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1523,8 +1536,35 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>21</word_id>
+					<word_id>16</word_id>
 					<id>28</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>nvarchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<cycle>false</cycle>
+						<description></description>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>22</word_id>
+					<id>29</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1551,7 +1591,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>11</word_id>
-					<id>29</id>
+					<id>30</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1578,7 +1618,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>0</word_id>
-					<id>30</id>
+					<id>31</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1604,8 +1644,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>23</word_id>
-					<id>31</id>
+					<word_id>24</word_id>
+					<id>32</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
