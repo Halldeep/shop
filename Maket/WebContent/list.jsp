@@ -77,7 +77,7 @@
 					<span>|</span>
 					<li class="erWrap"><a href="#">收藏夹</a> <em></em>
 						<p class="headEr different">
-							<a href="#">收藏的宝贝</a> <a class="last" href="#">收藏的品牌</a>
+							<a href="fav/list">收藏的宝贝</a> <a class="last" href="#">收藏的品牌</a>
 						</p></li>
 					<span>|</span>
 					<li class="erWrap"><a href="#">帮助中心</a> <em></em>
@@ -863,7 +863,7 @@
 								<em></em>收藏
 							</div> <!-- <div class="hoverShow wish"><em></em>加入心愿单</div> -->
 							<div class="show">
-								<a class="add" href="car/add?pid=<%=g.getGoodsid() %>">加入购物车</a> <a class="contrast" href="#">商品对比</a>
+								<a class="add" href="car/add?pid=<%=g.getGoodsid() %>">加入购物车</a> <a class="contrast" href="fav/add?pid=<%=g.getGoodsid()%>">加入收藏</a>
 							</div>
 							<div class="proImg">
 								<a href="#"> <img class="lazy" src="<%=g.getGoodspicture()%>" data-original="<%=g.getGoodspicture()%>" alt="">
