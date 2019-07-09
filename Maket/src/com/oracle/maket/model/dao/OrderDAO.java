@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface OrderDAO {
 
-	@Insert("insert into orders(ordertime,userid,state,location,notice,name) values(#{times},#{status},#{address},#{remark},#{userid},#{name})")
+	@Insert("insert into orders(orderstime,userid,state,location,notice,name) values(#{times},#{userid},#{status},#{address},#{remark},#{name})")
 	public int addOrder(@Param("userid")int userid,@Param("name")String name,@Param("address")String address,@Param("remark")String remark,@Param("status")String status,@Param("times")String times);
 }
