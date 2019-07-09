@@ -65,18 +65,20 @@
 							<span>注册澳猫团</span>
 							<a target="_blank" href="login.jsp">已有账号，登录</a>
 						</h3>
-						<p class="NICKNAME">
-							<em></em>
-							<input class="W310" name="nickname" placeholder="昵称" type="text">
-						</p>
+						
 						<p class="userName">
 							<em></em>
 							<input class="W310" name="username" placeholder="输入用户名" type="text">
+						</p>
+						<p class="userName">
+							<em></em>
+							<input class="W310" name="nickname" placeholder="输入昵称" type="text">
 						</p>
 						<p class="passWord">
 							<em></em>
 							<input class="W310" name="password" placeholder="请输入密码" type="password">
 						</p>
+					
 						
 						<p class="clearfix yzm">
 							<input type="text" placeholder="验证码">

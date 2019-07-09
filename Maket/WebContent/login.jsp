@@ -73,8 +73,14 @@
 							<em></em>
 							<input class="W310" name="password" placeholder="请输入密码" type="password">
 						</p>
-						<p class="clearfix yzm">
-							<input type="text" placeholder="验证码">
+						
+						 <li class="border testcode">
+            
+
+						
+						<p class="border testcode">
+						 <i class="border testcode"></i>
+							<input type="password"  class="iptcode" placeholder="验证码">
 							<span class="Ypic">
 								<span class="YP"></span>
 								<a href="#">换一张</a>
@@ -85,9 +91,12 @@
 							<span>记住密码</span>
 							<a target="_blank" href="#">忘记密码？</a>
 						</p>
+						
+						
 						<input class="loGin W310" type="submit" value="登录" />
 						</form>
 					</div>
+					
 					<div class="MCleft W115">
 						<img src="images/AppEr.png" alt="二维码">
 						<p>扫码下载客户端</p>
@@ -149,5 +158,6 @@
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>
 	<script src="js/login.js"></script>
+
 </body>
 </html>

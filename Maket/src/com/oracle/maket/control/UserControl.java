@@ -46,15 +46,27 @@ public class UserControl {
 		
 	}
 	@RequestMapping("/register")
-	public  String addUser(String username,String password){
+	public  String addUser(String username,String nickname,String password){
 		//1.获取提交订单页面上的各种参数（购买的商品编号和对应的数量，收货人的信息和备注）
 
 		System.out.println(username);
+		System.out.println(nickname);
 		System.out.println(password);
-
-		int result=dao.adduser(username,password);
-		return "login";
-	}
-
 	
-}
+		int result=dao.adduser(username,nickname,password);
+		if(result>0)
+		{
+			return "login";
+		}
+		else
+		{
+			return "register";
+		}
+	}
+	
+
+   @RequestMapping("/logout")
+    public  String logout(HttpSession session){
+	 session.setAttribute("logineduser",null);
+	 return"list";
+}}
