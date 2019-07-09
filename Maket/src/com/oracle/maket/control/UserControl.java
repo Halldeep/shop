@@ -53,16 +53,20 @@ public class UserControl {
 		System.out.println(nickname);
 		System.out.println(password);
 	
-		int result=dao.adduser(username,nickname,password);
-		if(result>0)
+		
+		int result1=dao.selectuser(username);
+		if(result1!=0)
 		{
 			return "login";
 		}
-		else
+		else if(result1==0)
 		{
-			return "register";
+			int result=dao.adduser(username,nickname,password);
 		}
+		return "login";
 	}
+	
+	
 	
 
    @RequestMapping("/logout")
