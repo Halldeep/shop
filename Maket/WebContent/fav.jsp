@@ -574,7 +574,9 @@
 							<div class="hoverShow collect"></div> <!-- <div class="hoverShow wish"><em></em>加入心愿单</div> -->
 							<div class="show">
 								<a class="add" href="car/add?pid=<%=g.getGoodsid()%>">加入购物车</a>
+
 								<a class="contrast" href="fav/delete?pid=<%=g.getGoodsid()%>">移除到收藏夹</a>
+
 							</div>
 							<div class="proImg">
 								<a href="#"> <img class="lazy" src="<%=g.getGoodspicture()%>" data-original="<%=g.getGoodspicture()%>" alt="">
