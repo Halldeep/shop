@@ -74,6 +74,6 @@ public class OrderControl {
 		System.out.println("删除购物车的方法");
 		int result=dao.deleteOrders(oid);
 		System.out.println(result>0?"删除成功":"删除失败");
-		return "redirect:list";
+		return "Member-allOrder";
 	}
 }

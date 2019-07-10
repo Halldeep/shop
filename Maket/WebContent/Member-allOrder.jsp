@@ -195,7 +195,7 @@
 	<div class="logoAndSearch w1190 textWarp">
 		<!-- logo -->
 		<div class="logo">
-			<a href="index.html">澳猫网</a>
+			<a href="list.jsp">澳猫网</a>
 		</div>
 		<!-- 搜索 -->
 		<div class="search">
@@ -698,7 +698,7 @@
 													<a href="">订单详情</a>
 												</p>
 											</li>
-											<li class="five"><a href="javascript:deleteOrder(<%=o.getOrdersid() %>)">取消订单</a></li>
+											<li class="five"><a class="delete" href="javascript:deleteOrder(<%=o.getOrdersid() %>)">取消订单</a></li>
 											
 					
 											
