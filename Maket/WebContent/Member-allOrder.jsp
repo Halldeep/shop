@@ -1,4 +1,5 @@
 
+<%@page import="com.oracle.maket.model.javaben.Users"%>
 <%@page import="com.oracle.maket.model.javaben.Goods"%>
 <%@page import="com.oracle.maket.model.javaben.Orders"%>
 <%@page import="java.util.Map"%>
@@ -31,8 +32,8 @@
 					</a>
 				</div>
 				<div class="user">
-					<a target="_blank" href="#">登录</a> <span>|</span> <a
-						target="_blank" href="#">免费注册</a>
+				<span>欢迎您，<B style="text-shadow: 0px 0px 1px green"><%=((Users)session.getAttribute("logineduser")).getNickname() %></B>!</span> 
+						
 				</div>
 				<div class="phone">
 					<a href="#"> <em></em> <span>手机逛澳猫</span>
@@ -43,7 +44,7 @@
 			<!-- 头部右边 -->
 			<div class="headRight">
 				<ul>
-					<li><a href="#">我的订单</a></li>
+					<li><a href="order/list">我的订单</a></li>
 					<span>|</span>
 					<li class="erWrap"><strong></strong> <a href="#">个人中心</a> <em></em>
 						<p class="headEr">
@@ -697,7 +698,7 @@
 													<a href="">订单详情</a>
 												</p>
 											</li>
-											<li class="five"><a href="javascript:deleteProduct(<%=o.getOrdersid() %>)">取消订单</a></li>
+											<li class="five"><a href="javascript:deleteOrder(<%=o.getOrdersid() %>)">取消订单</a></li>
 											
 					
 											
@@ -705,7 +706,7 @@
 										<script type="text/javascript">
 											function deleteOrder(oid){
 												if(window.confirm('确认删除这个订单吗')){
-													location.href='car/delete?oid='+oid;
+													location.href='order/delete?oid='+oid;
 													}
 												}
 			</script>
