@@ -206,7 +206,7 @@
 	<div class="logoAndSearch w1190 textWarp">
 		<!-- logo -->
 		<div class="logo">
-			<a href="index.html">澳猫网</a>
+			<a href="product/list">澳猫网</a>
 		</div>
 		<!-- 搜索 -->
 		<div class="search">
