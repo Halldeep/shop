@@ -1,11 +1,15 @@
 package com.oracle.maket.control;
 
+import java.util.Arrays;
+import java.util.Date;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.oracle.maket.model.dao.ProductDAO;
 import com.oracle.maket.model.dao.UserDAO;
 import com.oracle.maket.model.javaben.Users;
 
@@ -17,7 +21,6 @@ public class UserControl {
 	
 	@Autowired
 	private UserDAO dao;
-
 	@RequestMapping("/login")
 	public String login(String username,String password,HttpSession  session) {
 		System.out.println("user -login");
@@ -42,10 +45,32 @@ public class UserControl {
 		}
 		
 	}
-
 	@RequestMapping("/register")
-	public String register() {
-		System.out.println("user -register");
-		return "list";
+	public  String addUser(String username,String nickname,String password){
+		//1.获取提交订单页面上的各种参数（购买的商品编号和对应的数量，收货人的信息和备注）
+
+		System.out.println(username);
+		System.out.println(nickname);
+		System.out.println(password);
+	
+		
+		int result1=dao.selectuser(username);
+		if(result1!=0)
+		{
+			return "login";
+		}
+		else if(result1==0)
+		{
+			int result=dao.adduser(username,nickname,password);
+		}
+		return "login";
 	}
-}
+	
+	
+	
+
+   @RequestMapping("/logout")
+    public  String logout(HttpSession session){
+	 session.setAttribute("logineduser",null);
+	 return"list";
+}}

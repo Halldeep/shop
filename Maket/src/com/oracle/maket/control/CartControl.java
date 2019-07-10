@@ -27,6 +27,15 @@ import com.oracle.maket.model.javaben.Users;
 @RequestMapping("/car")
 public class CartControl {
 	
+	@RequestMapping("/delete")
+	public String deleteProductFormShopcar(int pid,HttpSession session){
+		int userid=((Users)session.getAttribute("logineduser")).getUserid();
+		System.out.println("删除购物车的方法");
+		int result=dao.deleteGoodsFromShopcar(userid,pid);
+		System.out.println(result>0?"删除成功":"删除失败");
+		return "redirect:list";
+	}
+	
 	@Autowired
 	private CartDAO dao;
 

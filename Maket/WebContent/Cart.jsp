@@ -348,8 +348,8 @@
 						</li>
 						<li class="Lastprice">¥ <u><%=c.getPrice()*sc.get(c) %></u></li>
 						<li class="last btn">
-							<button>移入收藏夹</button><br>
-							<button class="delet">删除</button>
+							<a>移入收藏夹</a><br>
+							<a class="delet"  href="javascript:deleteProduct(<%=c.getGoodsid() %>)">删除</a>
 						</li>
 					</ul>
 				</li>
@@ -357,6 +357,13 @@
 				
 				<%} %>
 			</ul>
+			<script type="text/javascript">
+			function deleteProduct(pid){
+				if(window.confirm('确认删除这个商品吗')){
+					location.href='car/delete?pid='+pid;
+				}
+			}
+			</script>
 			<div class="account">
 				<ul>
 					<li>收货人:<input type="text" name="name" style="height: 25px;font-size: 14px;box-shadow:0px 0px 3px orange"/></li>

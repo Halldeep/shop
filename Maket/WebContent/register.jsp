@@ -31,7 +31,7 @@
 				<a href="index.jsp">澳猫网</a>
 			</div>
 			<div class="LAStxt">
-				欢迎登录
+				欢迎注册
 			</div>
 			<div class="search">
 				<div class="txt">
@@ -60,43 +60,37 @@
 			<div class="mainContent boxS">
 				<div class="MCup clearfix">
 					<div class="MCright W310">
-						<form method="post" action="user/login">
+						<form method="post" action="user/register">
 						<h3 class="clearfix">
-							<span>登录澳猫团</span>
-							<a target="_blank" href="register.jsp">免费注册</a>
+							<span>注册澳猫团</span>
+							<a target="_blank" href="login.jsp">已有账号，登录</a>
 						</h3>
+						
 						<p class="userName">
 							<em></em>
-							<input class="W310" name="username" placeholder="请输入您的手机号/邮箱" type="text">
+							<input class="W310" name="username" placeholder="输入用户名" type="text">
+						</p>
+						<p class="userName">
+							<em></em>
+							<input class="W310" name="nickname" placeholder="输入昵称" type="text">
 						</p>
 						<p class="passWord">
 							<em></em>
 							<input class="W310" name="password" placeholder="请输入密码" type="password">
 						</p>
+					
 						
-						 <li class="border testcode">
-            
-
-						
-						<p class="border testcode">
-						 <i class="border testcode"></i>
-							<input type="password"  class="iptcode" placeholder="验证码">
+						<p class="clearfix yzm">
+							<input type="text" placeholder="验证码">
 							<span class="Ypic">
 								<span class="YP"></span>
 								<a href="#">换一张</a>
 							</span>
 						</p>
-						<p class="clearfix Jzmm">
-							<span class="checkbox checked"></span>
-							<span>记住密码</span>
-							<a target="_blank" href="#">忘记密码？</a>
-						</p>
-						
-						
-						<input class="loGin W310" type="submit" value="登录" />
+					
+						<input class="loGin W310" type="submit" value="注册" />
 						</form>
 					</div>
-					
 					<div class="MCleft W115">
 						<img src="images/AppEr.png" alt="二维码">
 						<p>扫码下载客户端</p>
@@ -158,6 +152,5 @@
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>
 	<script src="js/login.js"></script>
-
 </body>
 </html>

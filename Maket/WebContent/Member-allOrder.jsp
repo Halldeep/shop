@@ -61,8 +61,14 @@
 					<span>|</span>
 					<li class="erWrap"><a href="#">收藏夹</a> <em></em>
 						<p class="headEr different">
-							<a href="#">收藏的宝贝</a> <a class="last" href="#">收藏的品牌</a>
-						</p></li>
+
+
+
+							<a href="favourites.jsp">收藏的宝贝</a>
+							<a class="last" href="#">收藏的品牌</a>
+						</p>
+					</li>
+
 					<span>|</span>
 					<li class="erWrap"><a href="#">帮助中心</a> <em></em>
 						<p class="headEr">
