@@ -2,6 +2,7 @@ package com.oracle.maket.model.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -17,5 +18,8 @@ public interface FavDAO {
 	
 	@Select("select *  from goods where goodsid in (select goodsid from favorites where userid=#{0})")
 	public List<Goods> listAllProductsOfFav(int userid);
+	
+	@Delete("delete from favorites where goodsid=#{goodsid} and userid=#{userid}")
+	public int deleteProductFormShopfav(@Param("userid")int userid,@Param("goodsid")int goodsid);
 }
 

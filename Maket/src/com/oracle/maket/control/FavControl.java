@@ -45,4 +45,13 @@ public class FavControl {
 		}
 	}
 	
+	@RequestMapping("/delete")
+	public String deleteProductFormShopfav(int pid,HttpSession session){
+		int userid=((Users)session.getAttribute("logineduser")).getUserid();
+		System.out.print("É¾³ıÊÕ²Ø¼Ğ");
+		int result=dao.deleteProductFormShopfav(userid,pid);
+		System.out.println(result>0?"É¾³ı³É¹¦":"É¾³ıÊ§°Ü");
+		return "redirect:list";
+	}
+	
 }
