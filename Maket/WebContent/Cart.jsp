@@ -1,4 +1,5 @@
 
+<%@page import="com.oracle.maket.model.javaben.Users"%>
 <%@page import="com.oracle.maket.model.javaben.Goods"%>
 <%@page import="java.util.Map"%>
 
@@ -109,7 +110,7 @@
 			<div class="headLeft">
 				<div class="loginuser">
 					<a href="#">
-						<span>您好，1536983711@qq.com </span>
+						<span>欢迎您，<B style="text-shadow: 0px 0px 1px green"><%=((Users)session.getAttribute("logineduser")).getNickname() %></B>! </span>
 						<span>|</span>
 					</a>
 				</div>

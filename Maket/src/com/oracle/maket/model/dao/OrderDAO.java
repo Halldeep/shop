@@ -2,6 +2,9 @@ package com.oracle.maket.model.dao;
 
 import java.util.List;
 
+import javax.swing.Spring;
+
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -29,5 +32,8 @@ public interface OrderDAO {
 	
 	@Select("select * from goods where goodsid=#{0}")
 	public Goods getGoodsByGoodsid(int goodsid);
+	
+	@Delete("delete from orders where ordersid=#{ordersid}")
+	public int deleteOrders(@Param("ordersid")String ordersid);
 	
 }

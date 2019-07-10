@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.HttpSession;
+import javax.swing.Spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -65,5 +66,14 @@ public class OrderControl {
 			m.addAttribute("orderDetail", orderDtails);
 			return "Member-allOrder";
 		}
+	}
+	
+	@RequestMapping("/delete")
+	public String deleteProductFormShopcar(String oid,HttpSession session){
+		int userid=((Users)session.getAttribute("logineduser")).getUserid();
+		System.out.println("删除购物车的方法");
+		int result=dao.deleteOrders(oid);
+		System.out.println(result>0?"删除成功":"删除失败");
+		return "redirect:list";
 	}
 }

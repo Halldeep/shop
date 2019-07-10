@@ -697,9 +697,18 @@
 													<a href="">订单详情</a>
 												</p>
 											</li>
-											<li class="five"><a href="">取消订单</a></li>
+											<li class="five"><a href="javascript:deleteProduct(<%=o.getOrdersid() %>)">取消订单</a></li>
+											
+					
 											
 										</ul>
+										<script type="text/javascript">
+											function deleteOrder(oid){
+												if(window.confirm('确认删除这个订单吗')){
+													location.href='car/delete?oid='+oid;
+													}
+												}
+			</script>
 									</div>
 									
 								</div>
