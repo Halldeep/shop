@@ -14,14 +14,22 @@ public class Orders implements Serializable {
 	public String toString() {
 		return "Orders [ordersid=" + ordersid + ", orderstime=" + orderstime
 				+ ", userid=" + userid + ", state=" + state + ", location="
-				+ location + ", notice=" + notice + "]";
+				+ location + ", notice=" + notice + ", name=" + name + "]";
 	}
 
 	/** serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
 	/** 订单编号. */
-	private Integer ordersid;
+	private String ordersid;
+
+	public String getOrdersid() {
+		return ordersid;
+	}
+
+	public void setOrdersid(String ordersid) {
+		this.ordersid = ordersid;
+	}
 
 	/** 订单时间. */
 	private String orderstime;
@@ -37,30 +45,21 @@ public class Orders implements Serializable {
 
 	/** 备注. */
 	private String notice;
+	
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	/**
 	 * 僐儞僗僩儔僋僞.
 	 */
 	public Orders() {
-	}
-
-	/**
-	 * 订单编号 傪愝掕偟傑偡.
-	 * 
-	 * @param ordersid
-	 *            订单编号
-	 */
-	public void setOrdersid(Integer ordersid) {
-		this.ordersid = ordersid;
-	}
-
-	/**
-	 * 订单编号 傪庢摼偟傑偡.
-	 * 
-	 * @return 订单编号
-	 */
-	public Integer getOrdersid() {
-		return this.ordersid;
 	}
 
 	/**
