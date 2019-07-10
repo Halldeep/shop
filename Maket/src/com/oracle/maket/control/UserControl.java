@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,11 +58,14 @@ public class UserControl {
 		int result1=dao.selectuser(username);
 		if(result1!=0)
 		{
-			return "login";
+			JOptionPane.showMessageDialog(null, "用户已存在", "alert", JOptionPane.ERROR_MESSAGE);
+			return "register";
 		}
 		else if(result1==0)
 		{
 			int result=dao.adduser(username,nickname,password);
+			JOptionPane.showMessageDialog(null, "注册成功", "alert", JOptionPane.ERROR_MESSAGE);
+			
 		}
 		return "login";
 	}

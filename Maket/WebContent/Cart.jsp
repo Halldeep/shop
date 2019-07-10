@@ -348,7 +348,7 @@
 						</li>
 						<li class="Lastprice">¥ <u><%=c.getPrice()*sc.get(c) %></u></li>
 						<li class="last btn">
-							<a>移入收藏夹</a><br>
+							<a href="fav/add?pid=<%=c.getGoodsid()%>">移入收藏夹</a><br>
 							<a class="delet"  href="javascript:deleteProduct(<%=c.getGoodsid() %>)">删除</a>
 						</li>
 					</ul>
