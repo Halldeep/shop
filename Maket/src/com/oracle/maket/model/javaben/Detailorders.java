@@ -23,7 +23,15 @@ public class Detailorders implements Serializable {
 	private Integer goodsnumber;
 
 	/** ｶｩｵ･ｱ犲ﾅ. */
-	private Integer ordersid;
+	private String ordersid;
+
+	public String getOrdersid() {
+		return ordersid;
+	}
+
+	public void setOrdersid(String ordersid) {
+		this.ordersid = ordersid;
+	}
 
 	/**
 	 * コンストラクタ.
@@ -94,18 +102,7 @@ public class Detailorders implements Serializable {
 	 * @param ordersid
 	 *            ｶｩｵ･ｱ犲ﾅ
 	 */
-	public void setOrdersid(Integer ordersid) {
-		this.ordersid = ordersid;
-	}
-
-	/**
-	 * ｶｩｵ･ｱ犲ﾅ を取得します.
-	 * 
-	 * @return ｶｩｵ･ｱ犲ﾅ
-	 */
-	public Integer getOrdersid() {
-		return this.ordersid;
-	}
+	
 
 	/**
 	 * {@inheritDoc}
