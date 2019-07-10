@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,6 +43,7 @@ public class CartControl {
 	@RequestMapping("/add")
 	public String addProductToCar(int pid,HttpSession session){
 		//判断是否登录，没有登录，直接跳转到登录页面
+		
 		if(session.getAttribute("logineduser")==null){
 			return "login";
 		}else{
@@ -60,12 +62,24 @@ public class CartControl {
 			 */
 			
 			int result=dao.addProduct(userid, pid);
+			
+		/*	int result1=dao.selectpid(pid);
+			if(result1!=0){
+				pidnum=pidnum+1;
+				int result2=updateGoodsNumber(pid,pidnum);
+				JOptionPane.showMessageDialog(null, "商品已存在已存在", "alert", JOptionPane.ERROR_MESSAGE);
+				
+				return "Cart";
+				
+			}*/
+			
 			System.out.println(result>0?"添加成功":"添加失败");
 			
 			
 		return "redirect:list";
 		}
 	}
+
 	/**
 	 * 这是查询用户下的多有购物车商品信息的方法
 	 * @param session

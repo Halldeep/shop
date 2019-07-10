@@ -1,4 +1,5 @@
 
+<%@page import="com.oracle.maket.model.javaben.Users"%>
 <%@page import="com.oracle.maket.model.javaben.Goods"%>
 <%@page import="java.util.Map"%>
 
@@ -109,7 +110,7 @@
 			<div class="headLeft">
 				<div class="loginuser">
 					<a href="#">
-						<span>您好，1536983711@qq.com </span>
+						<span>欢迎您，<B style="text-shadow: 0px 0px 1px green"><%=((Users)session.getAttribute("logineduser")).getNickname() %></B>! </span>
 						<span>|</span>
 					</a>
 				</div>
@@ -128,7 +129,7 @@
 			<div class="headRight">
 			<ul>
 				<li><a class="everday" href="#">每日签到</a></li><span>|</span>
-				<li><a href="#">我的订单</a></li><span>|</span>
+				<li><a href="order/list">我的订单</a></li><span>|</span>
 				<li class="erWrap">
 					<strong></strong>
 					<a href="#">个人中心</a>
@@ -349,7 +350,7 @@
 						<li class="Lastprice">¥ <u><%=c.getPrice()*sc.get(c) %></u></li>
 						<li class="last btn">
 							<a href="fav/add?pid=<%=c.getGoodsid()%>">移入收藏夹</a><br>
-							<a class="delet"  href="javascript:deleteProduct(<%=c.getGoodsid() %>)">删除</a>
+							<a class="delete"  href="javascript:deleteProduct(<%=c.getGoodsid() %>)">删除</a>
 						</li>
 					</ul>
 				</li>

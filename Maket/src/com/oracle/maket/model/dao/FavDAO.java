@@ -21,5 +21,6 @@ public interface FavDAO {
 	
 	@Delete("delete from favorites where goodsid=#{goodsid} and userid=#{userid}")
 	public int deleteProductFormShopfav(@Param("userid")int userid,@Param("goodsid")int goodsid);
+
 }
 

@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.oracle.maket.model.javaben.Carts;
 import com.oracle.maket.model.javaben.Goods;
@@ -33,4 +34,10 @@ public interface CartDAO {
 	
 	@Delete("delete from carts where goodsid=#{productid} and userid=#{userid}")
 	public int deleteGoodsFromShopcar(@Param("userid")int userid,@Param("productid")int productid);
+	
+	@Select("select count(*) from carts where goodsid=#{productid} ")
+	public int selectpid(@Param("productid")int productid);
+	
+	@Update("update carts set cartgoodsnumber=#{cartgoodsnumber} where goodsid=#{productid}")
+	public int updateGoodsNumber(@Param("productid")int productid,@Param("cartgoodsnumber")int cartgoodsnumber);
 }

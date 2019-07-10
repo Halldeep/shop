@@ -40,9 +40,7 @@
 					<%
 						}else{
 					%>
-					<img
-						src="<%=((Users)session.getAttribute("logineduser")).getHeadimage()%>"
-						style="width: 16px; height: 16px; border-radius: 8px; border: 1px solid black; margin-left: 5px; margin-right: 5px; position: relative; top: 5px; box-shadow: 0px 0px 2px green" />欢迎您：<B
+				欢迎您：<B
 						style="text-shadow: 0px 0px 1px green"><%=((Users)session.getAttribute("logineduser")).getNickname()%></B>!
 
 					<%---这里应该是让安全退出的超级链接请求到后台的control方法，
@@ -61,7 +59,7 @@
 			<!-- 头部右边 -->
 			<div class="headRight">
 				<ul>
-					<li><a href="#">我的订单</a></li>
+					<li><a href="order/list">我的订单</a></li>
 					<span>|</span>
 					<li class="erWrap"><strong></strong> <a href="#">个人中心</a> <em></em>
 						<p class="headEr">
@@ -576,7 +574,9 @@
 							<div class="hoverShow collect"></div> <!-- <div class="hoverShow wish"><em></em>加入心愿单</div> -->
 							<div class="show">
 								<a class="add" href="car/add?pid=<%=g.getGoodsid()%>">加入购物车</a>
-								<a class="delet" href="fav/delete?pid=<%=g.getGoodsid()%>">移除收藏夹</a>
+
+								<a class="contrast" href="fav/delete?pid=<%=g.getGoodsid()%>">移除到收藏夹</a>
+
 							</div>
 							<div class="proImg">
 								<a href="#"> <img class="lazy" src="<%=g.getGoodspicture()%>" data-original="<%=g.getGoodspicture()%>" alt="">
